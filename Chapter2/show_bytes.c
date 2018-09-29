@@ -11,3 +11,15 @@ void show_byte(byte_pointer start, size_t len) {
     }
     printf("\n");
 }
+
+void show_byte_short(short x) {
+    show_byte((byte_pointer) &x, sizeof(x));
+}
+
+void show_byte_long(long x) {
+    show_byte((byte_pointer) &x, sizeof(x));
+}
+
+void show_byte_double(double x) {
+    show_byte((byte_pointer) &x, sizeof(x));
+}

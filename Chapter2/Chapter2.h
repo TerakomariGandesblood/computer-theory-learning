@@ -7,8 +7,20 @@
 
 #include <stddef.h>
 
-typedef unsigned char *byte_pointer;
+typedef const unsigned char *byte_pointer;
 
 void show_byte(byte_pointer start, size_t len);
+
+void show_byte_short(short x);
+
+void show_byte_long(long x);
+
+void show_byte_double(double x);
+
+void show_binary(byte_pointer start, size_t len);
+
+void show_binary_float(float x);
+
+void show_binary_double(double x);
 
 #endif //CHAPTER2_CHAPTER2_H
