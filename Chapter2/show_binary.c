@@ -5,7 +5,6 @@
 #include "Chapter2.h"
 #include <stdio.h>
 #include <limits.h>
-#include <malloc.h>
 
 void show_binary(byte_pointer start, size_t len) {
     for (size_t i = len; i-- > 0;) {
