@@ -9,6 +9,10 @@ void show_byte_short(short x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }
 
+void show_byte_int(int x) {
+    show_byte((byte_pointer) &x, sizeof(x));
+}
+
 void show_byte_long(long x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }

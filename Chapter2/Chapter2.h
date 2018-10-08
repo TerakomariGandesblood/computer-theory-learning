@@ -16,6 +16,8 @@ void show_byte(byte_pointer start, size_t len);
 //2.57
 void show_byte_short(short x);
 
+void show_byte_int(int x);
+
 void show_byte_long(long x);
 
 void show_byte_double(double x);
@@ -24,7 +26,7 @@ void show_byte_double(double x);
 bool is_little_endian();
 
 //2.59
-uint32_t hw_2_59(uint32_t x, uint32_t y);
+unsigned hw_2_59(unsigned x, unsigned y);
 
 //2.60
 unsigned replace_byte(unsigned x, int i, unsigned char b);
@@ -45,6 +47,21 @@ bool int_shifts_are_arithmetic();
 unsigned srl(unsigned x, int k);
 
 int sra(int x, int k);
+
+//2.64
+int any_odd_one(unsigned x);
+
+//2.65
+int odd_ones(unsigned x);
+
+//2.66
+int leftmost_one(unsigned x);
+
+//2.67
+int int_size_is_32();
+
+//2.68
+int low_one_mask(int n);
 
 //mine
 void show_binary(byte_pointer start, size_t len);

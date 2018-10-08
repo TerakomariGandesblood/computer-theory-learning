@@ -2,7 +2,7 @@
 // Created by kaiser on 18-9-29.
 //
 
-#include "Chapter2.h"
+#include "config.h"
 #include <stdio.h>
 #include <limits.h>
 
