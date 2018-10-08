@@ -5,7 +5,7 @@
 #include "../config.h"
 #include <stdbool.h>
 
-bool int_shifts_are_arithmetic() {
+bool int_shifts_are_arithmetic(void) {
     int text = ~0;
     text >>= 1;
     if (((text >> (INT_BIT - 1)) & 1) == 1)

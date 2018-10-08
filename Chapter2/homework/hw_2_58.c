@@ -5,10 +5,10 @@
 #include "../config.h"
 #include <stdbool.h>
 
-bool is_little_endian() {
+bool is_little_endian(void) {
     int test = 0xff;
     if (*((byte_pointer) &test) == 0xff)
         return true;
-    if (*((byte_pointer) &test) == 0)
+    else
         return false;
 }

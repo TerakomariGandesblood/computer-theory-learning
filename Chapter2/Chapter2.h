@@ -23,7 +23,7 @@ void show_byte_long(long x);
 void show_byte_double(double x);
 
 //2.58
-bool is_little_endian();
+bool is_little_endian(void);
 
 //2.59
 unsigned hw_2_59(unsigned x, unsigned y);
@@ -41,7 +41,7 @@ bool hw_2_61_c(int x);
 bool hw_2_61_d(int x);
 
 //2.62
-bool int_shifts_are_arithmetic();
+bool int_shifts_are_arithmetic(void);
 
 //2.63
 unsigned srl(unsigned x, int k);
@@ -49,16 +49,16 @@ unsigned srl(unsigned x, int k);
 int sra(int x, int k);
 
 //2.64
-int any_odd_one(unsigned x);
+bool any_odd_one(unsigned x);
 
 //2.65
-int odd_ones(unsigned x);
+bool odd_ones(unsigned x);
 
 //2.66
 int leftmost_one(unsigned x);
 
 //2.67
-int int_size_is_32();
+bool int_size_is_32(void);
 
 //2.68
 int low_one_mask(int n);

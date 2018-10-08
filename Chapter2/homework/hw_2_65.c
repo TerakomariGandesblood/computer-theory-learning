@@ -4,15 +4,16 @@
 
 #include "../config.h"
 #include <stddef.h>
+#include <stdbool.h>
 
-int odd_ones(unsigned x) {
+bool odd_ones(unsigned x) {
     int count = 0;
     for (size_t i = 1; i < INT_BIT; i += 2) {
         if (((x >> i) & 1) == 1)
             ++count;
     }
     if (count % 2)
-        return 0;
+        return false;
     else
-        return 1;
+        return true;
 }
