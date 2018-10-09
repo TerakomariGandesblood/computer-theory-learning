@@ -17,6 +17,10 @@ void show_byte_long(long x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }
 
+void show_byte_float(float x) {
+    show_byte((byte_pointer) &x, sizeof(x));
+}
+
 void show_byte_double(double x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }

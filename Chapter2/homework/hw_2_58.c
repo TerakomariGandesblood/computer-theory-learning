@@ -7,8 +7,5 @@
 
 bool is_little_endian(void) {
     int test = 0xff;
-    if (*((byte_pointer) &test) == 0xff)
-        return true;
-    else
-        return false;
+    return *((byte_pointer) &test) == 0xff;
 }

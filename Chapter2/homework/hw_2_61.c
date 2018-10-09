@@ -3,6 +3,7 @@
 //
 
 #include <stdbool.h>
+#include <limits.h>
 
 bool hw_2_61_a(int x) {
     return !(x + 1);
@@ -17,5 +18,5 @@ bool hw_2_61_c(int x) {
 }
 
 bool hw_2_61_d(int x) {
-    return !((((x >> 24) & 0xff) + 1) & 0xff);
+    return !((((x >> (sizeof(int) - 1) * CHAR_BIT) & 0xff) + 1) & 0xff);
 }

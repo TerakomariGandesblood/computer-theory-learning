@@ -20,6 +20,8 @@ void show_byte_int(int x);
 
 void show_byte_long(long x);
 
+void show_byte_float(float x);
+
 void show_byte_double(double x);
 
 //2.58
@@ -49,10 +51,10 @@ unsigned srl(unsigned x, int k);
 int sra(int x, int k);
 
 //2.64
-bool any_odd_one(unsigned x);
+int any_odd_one(unsigned x);
 
 //2.65
-bool odd_ones(unsigned x);
+int odd_ones(unsigned x);
 
 //2.66
 int leftmost_one(unsigned x);

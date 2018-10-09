@@ -6,6 +6,5 @@
 #include <stdio.h>
 
 int main(void) {
-    show_binary_int(100);
-    show_binary_int(50);
+    printf("%d", is_little_endian());
 }
