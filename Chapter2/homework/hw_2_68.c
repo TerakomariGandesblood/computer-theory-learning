@@ -6,5 +6,5 @@
 
 int low_one_mask(int n) {
     unsigned ret = ~0U;
-    return (int) (ret >> (INT_BIT - n));
+    return (int) ((ret >> (INT_BIT - n - 1)) >> 1);
 }

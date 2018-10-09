@@ -8,7 +8,7 @@
 int leftmost_one(unsigned x) {
     int count = 0;
     while (true) {
-        if ((int) x < 0)
+        if ((x >> (INT_BIT - 1)) == 1)
             break;
         x <<= 1;
         ++count;

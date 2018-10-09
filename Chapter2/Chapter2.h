@@ -63,11 +63,25 @@ bool int_size_is_32(void);
 //2.68
 int low_one_mask(int n);
 
+//2.69
+unsigned rotate_left(unsigned x, int n);
+
+//2.70
+bool fits_bits(int x, int n);
+
 //mine
 void show_binary(byte_pointer start, size_t len);
+
+void show_binary_short(short x);
+
+void show_binary_int(int x);
+
+void show_binary_long(long x);
 
 void show_binary_float(float x);
 
 void show_binary_double(double x);
+
+int unsigned_compare(unsigned x, unsigned y);
 
 #endif //CHAPTER2_CHAPTER2_H

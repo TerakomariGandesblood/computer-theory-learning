@@ -22,6 +22,63 @@ void show_binary(byte_pointer start, size_t len) {
     printf("\n");
 }
 
+void show_binary_short(short x) {
+    byte_pointer start = (byte_pointer) &x;
+    size_t len = sizeof(x);
+
+    for (size_t i = len; i-- > 0;) {
+        unsigned char byte = start[i];
+
+        int temp[CHAR_BIT];
+        for (size_t j = CHAR_BIT; j-- > 0; byte >>= 1)
+            temp[j] = 1U & byte;
+
+        for (size_t index = 0; index < CHAR_BIT; ++index) {
+            printf("%d", temp[index]);
+        }
+        printf(" ");
+    }
+    printf("\n");
+}
+
+void show_binary_int(int x) {
+    byte_pointer start = (byte_pointer) &x;
+    size_t len = sizeof(x);
+
+    for (size_t i = len; i-- > 0;) {
+        unsigned char byte = start[i];
+
+        int temp[CHAR_BIT];
+        for (size_t j = CHAR_BIT; j-- > 0; byte >>= 1)
+            temp[j] = 1U & byte;
+
+        for (size_t index = 0; index < CHAR_BIT; ++index) {
+            printf("%d", temp[index]);
+        }
+        printf(" ");
+    }
+    printf("\n");
+}
+
+void show_binary_long(long x) {
+    byte_pointer start = (byte_pointer) &x;
+    size_t len = sizeof(x);
+
+    for (size_t i = len; i-- > 0;) {
+        unsigned char byte = start[i];
+
+        int temp[CHAR_BIT];
+        for (size_t j = CHAR_BIT; j-- > 0; byte >>= 1)
+            temp[j] = 1U & byte;
+
+        for (size_t index = 0; index < CHAR_BIT; ++index) {
+            printf("%d", temp[index]);
+        }
+        printf(" ");
+    }
+    printf("\n");
+}
+
 void show_binary_float(float x) {
     byte_pointer start = (byte_pointer) &x;
     size_t len = sizeof(x);

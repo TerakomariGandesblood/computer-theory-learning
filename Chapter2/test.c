@@ -5,6 +5,7 @@
 #include "Chapter2.h"
 #include <stdio.h>
 
-int main() {
-
+int main(void) {
+    show_binary_int(100);
+    show_binary_int(50);
 }
