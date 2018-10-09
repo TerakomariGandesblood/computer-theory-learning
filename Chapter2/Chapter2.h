@@ -8,7 +8,6 @@
 #include "config.h"
 #include <stddef.h>
 #include <stdbool.h>
-#include <stdint.h>
 
 //2.55
 void show_byte(byte_pointer start, size_t len);
@@ -60,7 +59,7 @@ int odd_ones(unsigned x);
 int leftmost_one(unsigned x);
 
 //2.67
-bool int_size_is_32(void);
+int int_size_is_32(void);
 
 //2.68
 int low_one_mask(int n);
@@ -69,7 +68,7 @@ int low_one_mask(int n);
 unsigned rotate_left(unsigned x, int n);
 
 //2.70
-bool fits_bits(int x, int n);
+int fits_bits(int x, int n);
 
 //mine
 void show_binary(byte_pointer start, size_t len);
