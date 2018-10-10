@@ -79,6 +79,14 @@ void copy_int(int val, void *buf, size_t maxbyte);
 //2.73
 int saturating_add(int x, int y);
 
+//2.74
+int tsub_ok(int x, int y);
+
+//2.75
+unsigned unsigned_high_prod(unsigned x, unsigned y);
+
+int signed_high_prod(int x, int y);
+
 //mine
 void show_binary(byte_pointer start, size_t len);
 
@@ -86,7 +94,13 @@ void show_binary_short(short x);
 
 void show_binary_int(int x);
 
+void show_binary_unsigned(unsigned x);
+
 void show_binary_long(long x);
+
+void show_binary_long_long(long long x);
+
+void show_binary_unsigned_long_long(unsigned long long x);
 
 void show_binary_float(float x);
 

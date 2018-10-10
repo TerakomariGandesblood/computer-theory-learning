@@ -6,9 +6,7 @@
 
 unsigned srl(unsigned x, int k) {
     unsigned xsra = (unsigned) ((int) x >> k);
-    unsigned temp = ~0U;
-    temp >>= k;
-    return xsra & temp;
+    return xsra & ((~0U) >> k);
 }
 
 int sra(int x, int k) {

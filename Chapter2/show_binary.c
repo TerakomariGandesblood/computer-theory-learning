@@ -30,7 +30,19 @@ void show_binary_int(int x) {
     show_binary((byte_pointer) &x, sizeof(x));
 }
 
+void show_binary_unsigned(unsigned x) {
+    show_binary((byte_pointer) &x, sizeof(x));
+}
+
 void show_binary_long(long x) {
+    show_binary((byte_pointer) &x, sizeof(x));
+}
+
+void show_binary_long_long(long long x) {
+    show_binary((byte_pointer) &x, sizeof(x));
+}
+
+void show_binary_unsigned_long_long(unsigned long long x) {
     show_binary((byte_pointer) &x, sizeof(x));
 }
 
