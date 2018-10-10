@@ -7,5 +7,5 @@ int int_size_is_32(void) {
     test >>= 15;
     test >>= 15;
     test >>= 1;
-    return test == 1;
+    return test;
 }

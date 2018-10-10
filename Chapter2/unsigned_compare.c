@@ -2,10 +2,8 @@
 // Created by kaiser on 18-10-9.
 //
 
-#include <stdint.h>
-
-int uint32_t_compare(uint32_t x, uint32_t y) {
-    uint32_t diff = x ^y;
+int unsigned_compare(unsigned x, unsigned y) {
+    unsigned diff = x ^y;
     if (!diff)
         return 0;
 

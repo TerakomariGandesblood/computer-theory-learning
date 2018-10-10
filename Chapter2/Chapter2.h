@@ -70,6 +70,15 @@ unsigned rotate_left(unsigned x, int n);
 //2.70
 int fits_bits(int x, int n);
 
+//2.71
+int xbyte(packed_t word, int bytenum);
+
+//2.72
+void copy_int(int val, void *buf, size_t maxbyte);
+
+//2.73
+int saturating_add(int x, int y);
+
 //mine
 void show_binary(byte_pointer start, size_t len);
 
