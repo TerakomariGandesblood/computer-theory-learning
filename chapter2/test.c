@@ -4,12 +4,12 @@
 
 #include "chapter2.h"
 #include <stdio.h>
-#include <limits.h>
 #include <assert.h>
-#include <stdlib.h>
-#include <stdint.h>
 
 int main(void) {
-    show_binary_unsigned(hw_2_81_a(20));
-    //show_binary_unsigned(hw_2_81_b(10, 20));
+    assert(float_le(-0, +0));
+    assert(float_le(+0, -0));
+    assert(float_le(0, 3));
+    assert(float_le(-4, -0));
+    assert(float_le(-4, 4));
 }

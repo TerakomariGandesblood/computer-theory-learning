@@ -113,6 +113,11 @@ unsigned hw_2_81_a(int k);
 
 unsigned hw_2_81_b(int j, int k);
 
+//2.84
+unsigned f2u(float x);
+
+int float_le(float x, float y);
+
 //mine
 void show_binary(byte_pointer start, size_t len);
 
