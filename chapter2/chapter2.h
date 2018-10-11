@@ -87,6 +87,32 @@ unsigned unsigned_high_prod(unsigned x, unsigned y);
 
 int signed_high_prod(int x, int y);
 
+//2.76
+void *my_calloc(size_t nmenb, size_t size);
+
+//2.77
+int hw_2_77_a(int x);
+
+int hw_2_77_b(int x);
+
+int hw_2_77_c(int x);
+
+int hw_2_77_d(int x);
+
+//2.78
+int divide_power2(int x, int k);
+
+//2.79
+int mul3div4(int x);
+
+//2.80
+int threefourths(int x);
+
+//2.81
+unsigned hw_2_81_a(int k);
+
+unsigned hw_2_81_b(int j, int k);
+
 //mine
 void show_binary(byte_pointer start, size_t len);
 
