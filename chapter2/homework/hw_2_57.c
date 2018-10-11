@@ -2,7 +2,7 @@
 // Created by kaiser on 18-10-7.
 //
 
-#include "../Chapter2.h"
+#include "../chapter2.h"
 #include "../config.h"
 
 void show_byte_short(short x) {
