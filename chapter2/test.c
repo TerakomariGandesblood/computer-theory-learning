@@ -9,5 +9,7 @@
 #include <float.h>
 
 int main(void) {
-
+    __asm__(
+            ""
+            );
 }
