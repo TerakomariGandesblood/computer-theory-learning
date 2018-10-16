@@ -7,5 +7,8 @@ int int_size_is_32(void) {
     test >>= 15;
     test >>= 15;
     test >>= 1;
-    return test;
+    if (test == 1)
+        return 1;
+    else
+        return 0;
 }

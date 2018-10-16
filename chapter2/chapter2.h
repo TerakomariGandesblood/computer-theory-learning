@@ -19,6 +19,8 @@ void show_byte_int(int x);
 
 void show_byte_long(long x);
 
+void show_byte_long_long(long long x);
+
 void show_byte_float(float x);
 
 void show_byte_double(double x);
@@ -117,6 +119,18 @@ unsigned hw_2_81_b(int j, int k);
 unsigned f2u(float x);
 
 int float_le(float x, float y);
+
+//2.89
+bool hw_2_89_a(int x, double dx);
+
+bool hw_2_89_b(double dx, double dy, int x, int y);
+
+bool hw_2_89_c(double dx, double dy, double dz);
+
+bool hw_2_89_d(double dx, double dy, double dz);
+
+bool hw_2_89_e(double dx, double dz);
+
 
 //mine
 void show_binary(byte_pointer start, size_t len);

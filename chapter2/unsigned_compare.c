@@ -14,5 +14,5 @@ int unsigned_compare(unsigned x, unsigned y) {
     diff |= diff >> 16;
     diff ^= diff >> 1;
 
-    return x & diff ? -1 : 1;
+    return x & diff ? 1 : -1;
 }
