@@ -131,6 +131,21 @@ bool hw_2_89_d(double dx, double dy, double dz);
 
 bool hw_2_89_e(double dx, double dz);
 
+//2.90
+float u2f(unsigned x);
+
+float fpwr2(int x);
+
+//2.92
+bool is_nan(float_bits f);
+
+float_bits float_negate(float_bits f);
+
+//2.93
+float_bits float_absval(float_bits f);
+
+//2.94
+float_bits float_twice(float_bits f);
 
 //mine
 void show_binary(byte_pointer start, size_t len);

@@ -14,4 +14,6 @@ typedef unsigned char *byte_pointer;
 //2.71
 typedef unsigned packed_t;
 
+typedef unsigned float_bits;
+
 #endif //CHAPTER2_CONFIG_H
