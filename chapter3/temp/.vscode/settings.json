@@ -1,5 +1,0 @@
-{
-  "code-runner.executorMap": {
-    "asm": "cd $dir && gcc $fileName -Og -Wall -Wextra -std=c17 -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-  }
-}
