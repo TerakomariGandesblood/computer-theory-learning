@@ -1,4 +1,8 @@
+#include <stdio.h>
+
 int main() {
     __asm__(
-    "movq 0x10,%rax");
+    "movw $-12355555,%ax;"
+    "movswq %ax,%rsi;");
+    printf("%ld\n");
 }
