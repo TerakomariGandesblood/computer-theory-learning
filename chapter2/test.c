@@ -5,8 +5,8 @@
 #include "chapter2.h"
 #include <stdio.h>
 #include <assert.h>
-#include <float.h>
+#include <limits.h>
 
 int main(void) {
-    assert(1236547 == float_f2i(1236547));
+
 }

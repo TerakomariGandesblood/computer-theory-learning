@@ -154,6 +154,8 @@ float_bits float_half(float_bits f);
 int float_f2i(float_bits f);
 
 //2.97
+int zero_count(int x);
+
 float_bits float_i2f(int i);
 
 //mine
