@@ -1,7 +1,4 @@
 {
-    "files.associations": {
-        "stdio.h": "c"
-    },
   "code-runner.executorMap": {
     "c": "cd $dir && gcc $fileName -Og -S -Wall -Wextra -std=c17 && code $dir$fileNameWithoutExt.s",
     "asm": "cd $dir && gcc $dir$fileNameWithoutExt.c -Og -c -Wall -Wextra -std=c17 && objdump -d $dir$fileNameWithoutExt.o"
