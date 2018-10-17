@@ -147,6 +147,15 @@ float_bits float_absval(float_bits f);
 //2.94
 float_bits float_twice(float_bits f);
 
+//2.95
+float_bits float_half(float_bits f);
+
+//2.96
+int float_f2i(float_bits f);
+
+//2.97
+float_bits float_i2f(int i);
+
 //mine
 void show_binary(byte_pointer start, size_t len);
 
