@@ -13,7 +13,7 @@ main:
 	.cfi_def_cfa_offset 16
 #APP
 # 4 "main.c" 1
-	movw $-12355555,%ax;movswq %ax,%rsi;
+	movb $0xf,(%ebx);
 # 0 "" 2
 #NO_APP
 	movl	$.LC0, %edi
