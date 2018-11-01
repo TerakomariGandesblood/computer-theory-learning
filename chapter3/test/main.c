@@ -1,21 +1,36 @@
-void fuck(long x, long n, long *dest) {
-    long val = x;
+// long swap_add(long *xp, long *yp) {
+//     long x = *xp;
+//     long y = *yp;
+//     *xp = x;
+//     *yp = y;
+//     return x + y;
+// }
 
-    switch (n) {
-        case 100:
-            val *= 13;
-            break;
-        case 102:
-            val += 10;
-        case 103:
-            val += 11;
-            break;
-        case 104:
-        case 106:
-            val *= val;
-            break;
-        default:
-            val = 0;
-    }
-    *dest = val;
+// long caller() {
+//     long arg1 = 534;
+//     long arg2 = 1057;
+//     long sum = swap_add(&arg1, &arg2);
+//     long diff = arg1 - arg2;
+//     return sum * diff;
+// }
+
+void proc(long a, long *pa, int b, int *pb,
+          short c, short *pc, char d, char *pd) {
+    *pa = d;
+    *pb = c;
+    *pc = b;
+    *pd = a;
+}
+
+long call_proc() {
+    long x1 = 1;
+    int x2 = 2;
+    short x3 = 3;
+    char x4 = 4;
+    proc(x1, &x1, x2, &x2, x3, &x3, x4, &x4);
+    return (x1 + x2) * (x3 - x4);
+}
+
+int main() {
+    call_proc();
 }
