@@ -56,5 +56,4 @@ dkms.conf
 /.idea
 
 # Other
-/chapter3/test/main
-/chapter3/main
+/chapter3/test/main.s
