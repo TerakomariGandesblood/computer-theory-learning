@@ -13,4 +13,7 @@ void good_echo();
 //3.73
 range_t find_range(float x);
 
+//3.74
+range_t find_range_cmov(float x);
+
 #endif //CHAPTER3_CHAPTER3_H
