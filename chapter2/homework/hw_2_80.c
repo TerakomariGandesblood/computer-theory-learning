@@ -4,7 +4,8 @@
 
 #include <limits.h>
 
-int threefourths(int x) {
+int threefourths(int x)
+{
     int high = x & ~0x3;
     int low = x & 0x3;
 

@@ -4,7 +4,8 @@
 
 #include "../config.h"
 
-range_t find_range_cmov(float x) {
+range_t find_range_cmov(float x)
+{
     __asm__(
     "movq $0,%r8;"
     "movq $1,%r9;"
@@ -15,6 +16,5 @@ range_t find_range_cmov(float x) {
     "cmovb %r8,%rax;"
     "cmove %r9,%rax;"
     "cmova %r10,%rax;"
-    "cmovp %r11,%rax;"
-    );
+    "cmovp %r11,%rax;");
 }

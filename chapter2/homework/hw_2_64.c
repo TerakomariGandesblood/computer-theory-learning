@@ -4,6 +4,7 @@
 
 #include <stdbool.h>
 
-int any_odd_one(unsigned x) {
+int any_odd_one(unsigned x)
+{
     return (bool) (x & 0xaaaaaaaa);
 }

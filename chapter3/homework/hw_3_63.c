@@ -2,9 +2,11 @@
 // Created by kaiser on 18-11-13.
 //
 
-long switch_prob(long x, long n) {
+long switch_prob(long x, long n)
+{
     long result = x;
-    switch (n) {
+    switch (n)
+    {
         case 60:
         case 62:
             result *= 8;

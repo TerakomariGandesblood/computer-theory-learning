@@ -2,13 +2,16 @@
 // Created by kaiser on 18-11-13.
 //
 
-typedef enum {
+typedef enum
+{
     MODE_A, MODE_B, MODE_C, MODE_D, MODE_E
 } mode_t;
 
-long switch3(long *p1, long *p2, mode_t action) {
+long switch3(long *p1, long *p2, mode_t action)
+{
     long result = 0;
-    switch (action) {
+    switch (action)
+    {
         case MODE_A:
             result = *p2;
             *p2 = *p1;

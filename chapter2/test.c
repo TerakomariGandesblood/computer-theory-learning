@@ -4,6 +4,7 @@
 
 #include "chapter2.h"
 
-int main(void) {
+int main(void)
+{
 
 }

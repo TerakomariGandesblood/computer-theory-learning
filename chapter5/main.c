@@ -6,7 +6,8 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(void) {
+int main(void)
+{
     vec_ptr fuck = new_vec(100000000);
     long shit;
 

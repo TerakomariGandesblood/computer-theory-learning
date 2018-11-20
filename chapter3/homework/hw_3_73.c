@@ -4,7 +4,8 @@
 
 #include "../config.h"
 
-range_t find_range(float x) {
+range_t find_range(float x)
+{
     __asm__(
     "vxorps %xmm1,%xmm1,%xmm1;"
     "vucomiss %xmm1,%xmm0;"
@@ -24,6 +25,5 @@ range_t find_range(float x) {
     "L3:;"
     "movq $3,%rax;"
     "jmp L4;"
-    "L4:;"
-    );
+    "L4:;");
 }

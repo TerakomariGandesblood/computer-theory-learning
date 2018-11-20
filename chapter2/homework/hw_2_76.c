@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-void *my_calloc(size_t nmenb, size_t size) {
+void *my_calloc(size_t nmenb, size_t size)
+{
     if (nmenb == 0 || size == 0)
         return NULL;
     size_t buf_size = nmenb * size;
