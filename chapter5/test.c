@@ -77,9 +77,7 @@ void combine3(vec_ptr v, data_t *dest)
     data_t *data = get_vec_start(v);
 
     for (long i = 0; i < length; i++)
-    {
         *dest = *dest OP data[i];
-    }
 }
 
 void combine4(vec_ptr v, data_t *dest)
@@ -89,8 +87,22 @@ void combine4(vec_ptr v, data_t *dest)
     data_t *data = get_vec_start(v);
 
     for (long i = 0; i < length; i++)
-    {
         acc = acc OP data[i];
-    }
+    *dest = acc;
+}
+
+void combine5(vec_ptr v, data_t *dest)
+{
+    long i;
+    data_t acc = IDENT;
+    long length = vec_length(v);
+    long limit = length - 1;
+    data_t *data = get_vec_start(v);
+
+    for (i = 0; i < limit; i += 2)
+        acc = (acc OP data[i]) OP data[i + 1];
+    for (; i < length; i++)
+        acc = acc OP data[i];
+
     *dest = acc;
 }

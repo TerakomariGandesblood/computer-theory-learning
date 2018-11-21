@@ -31,4 +31,9 @@ int main(void)
         combine4(fuck, &shit);
         printf("%ld\n", clock() - start);
     }
+    {
+        clock_t start = clock();
+        combine5(fuck, &shit);
+        printf("%ld\n", clock() - start);
+    }
 }
