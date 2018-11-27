@@ -5,8 +5,7 @@
 #include <limits.h>
 #include <stdbool.h>
 
-bool int_shifts_are_arithmetic(void)
-{
+bool int_shifts_are_arithmetic(void) {
     int text = (~0) >> 1;
     return text != INT_MAX;
 }

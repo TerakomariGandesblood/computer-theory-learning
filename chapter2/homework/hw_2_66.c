@@ -2,8 +2,7 @@
 // Created by kaiser on 18-10-8.
 //
 
-int leftmost_one(unsigned x)
-{
+int leftmost_one(unsigned x) {
     x |= x >> 1;
     x |= x >> 2;
     x |= x >> 4;

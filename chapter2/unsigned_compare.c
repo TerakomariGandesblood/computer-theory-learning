@@ -2,8 +2,7 @@
 // Created by kaiser on 18-10-9.
 //
 
-int unsigned_compare(unsigned x, unsigned y)
-{
+int unsigned_compare(unsigned x, unsigned y) {
     unsigned diff = x ^y;
     if (!diff)
         return 0;

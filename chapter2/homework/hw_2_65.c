@@ -2,8 +2,7 @@
 // Created by kaiser on 18-10-8.
 //
 
-int odd_ones(unsigned x)
-{
+int odd_ones(unsigned x) {
     x ^= x >> 16;
     x ^= x >> 8;
     x ^= x >> 4;

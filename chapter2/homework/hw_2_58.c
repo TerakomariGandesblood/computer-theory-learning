@@ -5,8 +5,7 @@
 #include "../config.h"
 #include <stdbool.h>
 
-bool is_little_endian(void)
-{
+bool is_little_endian(void) {
     unsigned test = 0xff;
     return *((byte_pointer) &test) == 0xff;
 }

@@ -5,8 +5,7 @@
 #include "../config.h"
 #include <limits.h>
 
-int float_f2i(float_bits f)
-{
+int float_f2i(float_bits f) {
     unsigned frac = f & 0x7fffff;
     unsigned exp = (f >> 23) & 0xff;
     unsigned bias = 127;
@@ -16,8 +15,7 @@ int float_f2i(float_bits f)
         ret = 0;
     if (exp == 0xff || exp >= 31 + bias)
         ret = INT_MIN;
-    else
-    {
+    else {
         int E = exp - bias;
         int M = frac | 0x800000;
         if (E > 23)

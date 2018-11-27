@@ -5,32 +5,26 @@
 #include "../chapter2.h"
 #include "../config.h"
 
-void show_byte_short(short x)
-{
+void show_byte_short(short x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }
 
-void show_byte_int(int x)
-{
+void show_byte_int(int x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }
 
-void show_byte_long(long x)
-{
+void show_byte_long(long x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }
 
-void show_byte_long_long(long long x)
-{
+void show_byte_long_long(long long x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }
 
-void show_byte_float(float x)
-{
+void show_byte_float(float x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }
 
-void show_byte_double(double x)
-{
+void show_byte_double(double x) {
     show_byte((byte_pointer) &x, sizeof(x));
 }
