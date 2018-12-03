@@ -35,4 +35,14 @@ int main(void) {
         combine5(fuck, &shit);
         printf("%ld\n", clock() - start);
     }
+    {
+        clock_t start = clock();
+        combine6(fuck, &shit);
+        printf("%ld\n", clock() - start);
+    }
+    {
+        clock_t start = clock();
+        combine7(fuck, &shit);
+        printf("%ld\n", clock() - start);
+    }
 }

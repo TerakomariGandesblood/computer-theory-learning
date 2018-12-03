@@ -33,4 +33,8 @@ void combine4(vec_ptr v, data_t *dest);
 
 void combine5(vec_ptr v, data_t *dest);
 
+void combine6(vec_ptr v, data_t *dest);
+
+void combine7(vec_ptr v, data_t *dest);
+
 #endif //CHAPTER5_TEST_H
