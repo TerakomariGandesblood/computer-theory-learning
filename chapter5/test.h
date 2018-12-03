@@ -5,7 +5,7 @@
 #ifndef CHAPTER5_TEST_H
 #define CHAPTER5_TEST_H
 
-typedef long data_t;
+typedef double data_t;
 
 typedef struct {
     long len;
@@ -13,7 +13,7 @@ typedef struct {
 } vec_rec, *vec_ptr;
 
 #define IDENT 0
-#define OP +
+#define OP *
 
 vec_ptr new_vec(long len);
 

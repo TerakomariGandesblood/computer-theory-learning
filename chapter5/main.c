@@ -8,7 +8,7 @@
 
 int main(void) {
     vec_ptr fuck = new_vec(100000000);
-    long shit;
+    double shit;
 
     {
         clock_t start = clock();
