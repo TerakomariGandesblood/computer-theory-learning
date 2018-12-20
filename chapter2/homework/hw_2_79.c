@@ -5,6 +5,6 @@
 #include "../chapter2.h"
 
 int mul3div4(int x) {
-    int temp = x + (x << 1);
-    return divide_power2(temp, 2);
+  int temp = x + (x << 1);
+  return divide_power2(temp, 2);
 }

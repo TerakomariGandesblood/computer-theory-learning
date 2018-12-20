@@ -3,17 +3,17 @@
 //
 
 int hw_2_77_a(int x) {
-    return x + (x << 4);
+  return x + (x << 4);
 }
 
 int hw_2_77_b(int x) {
-    return x - (x << 3);
+  return x - (x << 3);
 }
 
 int hw_2_77_c(int x) {
-    return (x << 6) - (x << 2);
+  return (x << 6) - (x << 2);
 }
 
 int hw_2_77_d(int x) {
-    return (x << 4) - (x << 7);
+  return (x << 4) - (x << 7);
 }

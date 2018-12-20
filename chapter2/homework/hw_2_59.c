@@ -3,5 +3,5 @@
 //
 
 unsigned hw_2_59(unsigned x, unsigned y) {
-    return (x & 0xff) | (y & ~0xff);
+  return (x & 0xff) | (y & ~0xff);
 }

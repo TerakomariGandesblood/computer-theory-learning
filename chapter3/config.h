@@ -6,7 +6,7 @@
 #define CHAPTER3_CONFIG_H
 
 typedef enum {
-    NEG, ZERO, POS, OTHER
+  NEG, ZERO, POS, OTHER
 } range_t;
 
 #endif //CHAPTER3_CONFIG_H

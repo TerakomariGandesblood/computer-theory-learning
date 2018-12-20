@@ -5,6 +5,6 @@
 #include "../config.h"
 
 unsigned rotate_left(unsigned x, int n) {
-    unsigned temp = (x >> (INT_BIT - n - 1)) >> 1;
-    return (x << n) | temp;
+  unsigned temp = (x >> (INT_BIT - n - 1)) >> 1;
+  return (x << n) | temp;
 }

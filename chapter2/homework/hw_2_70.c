@@ -5,5 +5,5 @@
 #include "../config.h"
 
 int fits_bits(int x, int n) {
-    return !((x >> (n - 1)) >> 1);
+  return !((x >> (n - 1)) >> 1);
 }

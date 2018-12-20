@@ -6,6 +6,6 @@
 #include <stdbool.h>
 
 bool is_little_endian(void) {
-    unsigned test = 0xff;
-    return *((byte_pointer) &test) == 0xff;
+  unsigned test = 0xff;
+  return *((byte_pointer) &test) == 0xff;
 }
