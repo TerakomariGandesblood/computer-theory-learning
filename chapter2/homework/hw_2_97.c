@@ -2,8 +2,8 @@
 // Created by kaiser on 18-10-11.
 //
 
-#include "../config.h"
 #include <limits.h>
+#include "../config.h"
 
 int zero_count(int x) {
   int ret = 0;
@@ -18,10 +18,8 @@ int zero_count(int x) {
 
 float_bits float_i2f(int i) {
   unsigned sign = i > 0 ? 0 : 1;
-  if (i == 0)
-    return 0;
-  if (i == INT_MIN)
-    return 0xcf000000;
+  if (i == 0) return 0;
+  if (i == INT_MIN) return 0xcf000000;
 
   int M = i > 0 ? i : -i;
   int count = zero_count(M);

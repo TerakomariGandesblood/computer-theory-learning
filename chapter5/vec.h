@@ -18,4 +18,4 @@ long vec_length(vec_ptr v);
 
 data_t *get_vec_start(vec_ptr v);
 
-#endif //CHAPTER5_VEC_H
+#endif  // CHAPTER5_VEC_H

@@ -9,11 +9,11 @@
 
 typedef unsigned char *byte_pointer;
 
-#define INT_BIT (sizeof(int)*CHAR_BIT)
+#define INT_BIT (sizeof(int) * CHAR_BIT)
 
-//2.71
+// 2.71
 typedef unsigned packed_t;
 
 typedef unsigned float_bits;
 
-#endif //CHAPTER2_CONFIG_H
+#endif  // CHAPTER2_CONFIG_H

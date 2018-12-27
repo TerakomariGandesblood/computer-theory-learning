@@ -9,8 +9,7 @@ float_bits float_twice(float_bits f) {
   unsigned exp = (f >> 23) & 0xff;
   unsigned sign = f >> 31;
 
-  if (exp == 0xff)
-    return f;
+  if (exp == 0xff) return f;
 
   if (exp == 0) {
     if ((frac >> 22) == 1) {

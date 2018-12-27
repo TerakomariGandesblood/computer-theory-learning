@@ -9,8 +9,7 @@ float_bits float_half(float_bits f) {
   unsigned exp = (f >> 23) & 0xff;
   unsigned sign = f >> 31;
 
-  if (exp == 0xff)
-    return f;
+  if (exp == 0xff) return f;
 
   int carry = ((frac & 0x3) == 0x3);
 

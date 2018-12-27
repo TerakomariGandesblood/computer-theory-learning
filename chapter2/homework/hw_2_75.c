@@ -5,8 +5,8 @@
 #include "../config.h"
 
 int signed_high_prod(int x, int y) {
-  long long ret = (long long) x * (long long) y;
-  return (int) (ret >> 32);
+  long long ret = (long long)x * (long long)y;
+  return (int)(ret >> 32);
 }
 
 unsigned unsigned_high_prod(unsigned x, unsigned y) {

@@ -3,9 +3,8 @@
 //
 
 int unsigned_compare(unsigned x, unsigned y) {
-  unsigned diff = x ^y;
-  if (!diff)
-    return 0;
+  unsigned diff = x ^ y;
+  if (!diff) return 0;
 
   diff |= diff >> 1;
   diff |= diff >> 2;

@@ -5,9 +5,7 @@
 #include <float.h>
 #include <limits.h>
 
-float u2f(unsigned x) {
-  return *(float *) &x;
-}
+float u2f(unsigned x) { return *(float *)&x; }
 
 float fpwr2(int x) {
   unsigned exp, frac;
@@ -20,7 +18,7 @@ float fpwr2(int x) {
     exp = 0;
     frac = ((1U << 22) >> (-x - 126));
   } else if (x < 128) {
-    exp = (unsigned) (x + 127);
+    exp = (unsigned)(x + 127);
     frac = 0;
   } else {
     exp = 255;

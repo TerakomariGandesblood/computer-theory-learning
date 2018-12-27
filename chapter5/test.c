@@ -2,12 +2,10 @@
 // Created by kaiser on 18-12-5.
 //
 
-#include "vec.h"
-#include "chapter5.h"
+#include <assert.h>
 #include <stdio.h>
 #include <time.h>
-#include <assert.h>
+#include "chapter5.h"
+#include "vec.h"
 
-int main() {
-
-}
+int main() {}

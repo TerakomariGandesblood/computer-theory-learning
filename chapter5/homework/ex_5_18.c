@@ -26,7 +26,8 @@ double poly_6_3a(double a[], double x, long degree) {
   long i;
   double result = a[0], result2 = 0, result3 = 0;
   double xpwr = x, xpwr2 = x * x, xpwr3 = x * x * x;
-  double xpwr4 = x * x * x * x, xpwr5 = x * x * x * x * x, xpwr6 = x * x * x * x * x * x;
+  double xpwr4 = x * x * x * x, xpwr5 = x * x * x * x * x,
+         xpwr6 = x * x * x * x * x * x;
   double x6 = x * x * x * x * x * x;
   for (i = 1; i <= degree - 5; i += 6) {
     result += (a[i] * xpwr + a[i + 1] * xpwr2);

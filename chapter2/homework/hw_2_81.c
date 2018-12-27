@@ -9,6 +9,4 @@ unsigned hw_2_81_a(int k) {
   return ret << k;
 }
 
-unsigned hw_2_81_b(int j, int k) {
-  return ~hw_2_81_a(k) << j;
-}
+unsigned hw_2_81_b(int j, int k) { return ~hw_2_81_a(k) << j; }

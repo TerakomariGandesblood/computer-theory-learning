@@ -5,8 +5,6 @@
 #ifndef CHAPTER3_CONFIG_H
 #define CHAPTER3_CONFIG_H
 
-typedef enum {
-  NEG, ZERO, POS, OTHER
-} range_t;
+typedef enum { NEG, ZERO, POS, OTHER } range_t;
 
-#endif //CHAPTER3_CONFIG_H
+#endif  // CHAPTER3_CONFIG_H

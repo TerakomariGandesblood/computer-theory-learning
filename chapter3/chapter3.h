@@ -7,13 +7,13 @@
 
 #include "config.h"
 
-//3.71
+// 3.71
 void good_echo();
 
-//3.73
+// 3.73
 range_t find_range(float x);
 
-//3.74
+// 3.74
 range_t find_range_cmov(float x);
 
-#endif //CHAPTER3_CHAPTER3_H
+#endif  // CHAPTER3_CHAPTER3_H
