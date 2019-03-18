@@ -52,7 +52,6 @@ Mkfile.old
 dkms.conf
 
 # IDE files
-/.idea
-
-# Other
-/chapter3/test/main.s
+.idea
+.cmake-build-debug
+.cmake-build-release
