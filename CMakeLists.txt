@@ -6,8 +6,10 @@ set(CMAKE_C_EXTENSIONS OFF)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_compile_options(-Wall -Wextra -Wpedantic -Werror)
+add_compile_options(-Wall -Wextra -Wpedantic)
 
 #add_subdirectory(chapter2)
 #add_subdirectory(chapter3)
 #add_subdirectory(chapter5)
+#add_subdirectory(chapter7)
+add_subdirectory(chapter8)
