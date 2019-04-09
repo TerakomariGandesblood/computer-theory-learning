@@ -1,0 +1,13 @@
+include_directories(.)
+
+add_executable(fork example/fork.c csapp.c)
+target_link_libraries(fork pthread)
+
+add_executable(waitpid example/waitpid.c csapp.c)
+target_link_libraries(waitpid pthread)
+
+add_executable(ex_8_20 homework/ex_8_20.c csapp.c)
+target_link_libraries(ex_8_20 pthread)
+
+add_executable(test test.c csapp.c)
+target_link_libraries(test pthread)
