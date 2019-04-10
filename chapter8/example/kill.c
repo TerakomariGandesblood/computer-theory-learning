@@ -6,6 +6,7 @@
 
 int main(void) {
   printf("%d\n", getpid());
-  Kill(getpid(), SIGSTOP);
+  // Kill(getpid(), SIGSTOP);
+  Pause();
   printf("test\n");
 }
