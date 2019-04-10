@@ -6,6 +6,15 @@ target_link_libraries(fork pthread)
 add_executable(waitpid example/waitpid.c csapp.c)
 target_link_libraries(waitpid pthread)
 
+add_executable(shell example/shell.c csapp.c)
+target_link_libraries(shell pthread)
+
+add_executable(kill example/kill.c csapp.c)
+target_link_libraries(kill pthread)
+
+add_executable(alarm example/alarm.c csapp.c)
+target_link_libraries(alarm pthread)
+
 add_executable(ex_8_20 homework/ex_8_20.c csapp.c)
 target_link_libraries(ex_8_20 pthread)
 
