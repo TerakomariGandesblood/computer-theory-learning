@@ -15,6 +15,12 @@ target_link_libraries(kill pthread)
 add_executable(alarm example/alarm.c csapp.c)
 target_link_libraries(alarm pthread)
 
+add_executable(signal example/signal.c csapp.c)
+target_link_libraries(signal pthread)
+
+add_executable(snooze example/snooze.c csapp.c)
+target_link_libraries(snooze pthread)
+
 add_executable(ex_8_20 homework/ex_8_20.c csapp.c)
 target_link_libraries(ex_8_20 pthread)
 
