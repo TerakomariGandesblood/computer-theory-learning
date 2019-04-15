@@ -24,6 +24,12 @@ target_link_libraries(snooze pthread)
 add_executable(sigprocmask example/sigprocmask.c csapp.c)
 target_link_libraries(sigprocmask pthread)
 
+add_executable(handler example/handler.c csapp.c)
+target_link_libraries(handler pthread)
+
+add_executable(handler2 example/handler2.c csapp.c)
+target_link_libraries(handler2 pthread)
+
 add_executable(ex_8_20 homework/ex_8_20.c csapp.c)
 target_link_libraries(ex_8_20 pthread)
 
