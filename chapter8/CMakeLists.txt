@@ -36,6 +36,9 @@ target_link_libraries(jmp pthread)
 add_executable(restart example/restart.c csapp.c)
 target_link_libraries(restart pthread)
 
+add_executable(wait_for_signal example/wait_for_signal.c csapp.c)
+target_link_libraries(wait_for_signal pthread)
+
 add_executable(ex_8_20 homework/ex_8_20.c csapp.c)
 target_link_libraries(ex_8_20 pthread)
 
