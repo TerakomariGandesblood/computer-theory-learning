@@ -30,6 +30,12 @@ target_link_libraries(handler pthread)
 add_executable(handler2 example/handler2.c csapp.c)
 target_link_libraries(handler2 pthread)
 
+add_executable(jmp example/jmp.c csapp.c)
+target_link_libraries(jmp pthread)
+
+add_executable(restart example/restart.c csapp.c)
+target_link_libraries(restart pthread)
+
 add_executable(ex_8_20 homework/ex_8_20.c csapp.c)
 target_link_libraries(ex_8_20 pthread)
 
