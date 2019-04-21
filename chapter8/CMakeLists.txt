@@ -39,8 +39,23 @@ target_link_libraries(restart pthread)
 add_executable(wait_for_signal example/wait_for_signal.c csapp.c)
 target_link_libraries(wait_for_signal pthread)
 
-add_executable(ex_8_20 homework/ex_8_20.c csapp.c)
-target_link_libraries(ex_8_20 pthread)
+add_executable(myls homework/myls.c csapp.c)
+target_link_libraries(myls pthread)
+
+add_executable(mysystem homework/mysystem.c csapp.c)
+target_link_libraries(mysystem pthread)
+
+add_executable(ex_8_23 homework/ex_8_23.c csapp.c)
+target_link_libraries(ex_8_23 pthread)
+
+add_executable(ex_8_24 homework/ex_8_24.c csapp.c)
+target_link_libraries(ex_8_24 pthread)
+
+add_executable(ex_8_25 homework/ex_8_25.c csapp.c)
+target_link_libraries(ex_8_25 pthread)
+
+add_executable(ex_8_26 homework/ex_8_26.c csapp.c)
+target_link_libraries(ex_8_26 pthread)
 
 add_executable(test test.c csapp.c)
 target_link_libraries(test pthread)
