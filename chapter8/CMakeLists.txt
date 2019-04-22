@@ -58,6 +58,3 @@ target_link_libraries(shell pthread)
 
 add_executable(foo homework/shell/foo.c)
 target_link_libraries(foo pthread)
-
-add_executable(test test.c csapp.c)
-target_link_libraries(test pthread)

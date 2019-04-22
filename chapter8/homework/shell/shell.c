@@ -17,11 +17,7 @@ void Eval(char *cmdline) {
   strcpy(buf, cmdline);
 
   // true 代表在后台执行
-  bool bg;
-  bg = ParseLine(buf, argv);
-  if (argv[0] == NULL) {
-    return;
-  }
+  bool bg = ParseLine(buf, argv);
 
   pid_t pid;
   if (!BuiltinCommand(argv)) {
@@ -45,8 +41,6 @@ void Eval(char *cmdline) {
 
       Jid new_jid = AddJob(pid, cmdline);
 
-      Sigprocmask(SIG_SETMASK, &prev_one, NULL);
-
       if (!bg) {
         SetFgPid(pid);
         while (GetFgPid()) {
@@ -55,6 +49,8 @@ void Eval(char *cmdline) {
       } else {
         printf("[%d] %d %s\t%s\n", new_jid, pid, "Running", cmdline);
       }
+
+      Sigprocmask(SIG_SETMASK, &prev_one, NULL);
     }
   }
 }
