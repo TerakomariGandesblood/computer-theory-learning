@@ -6,9 +6,6 @@ target_link_libraries(fork pthread)
 add_executable(waitpid example/waitpid.c csapp.c)
 target_link_libraries(waitpid pthread)
 
-add_executable(shell example/shell.c csapp.c)
-target_link_libraries(shell pthread)
-
 add_executable(kill example/kill.c csapp.c)
 target_link_libraries(kill pthread)
 
@@ -54,10 +51,13 @@ target_link_libraries(ex_8_24 pthread)
 add_executable(ex_8_25 homework/ex_8_25.c csapp.c)
 target_link_libraries(ex_8_25 pthread)
 
-add_executable(ex_8_26 homework/ex_8_26.c csapp.c)
-target_link_libraries(ex_8_26 pthread)
+add_executable(shell homework/shell/main.c homework/shell/job.c
+    homework/shell/job.h homework/shell/shell.c
+    homework/shell/shell.h csapp.c)
+target_link_libraries(shell pthread)
 
-add_executable(foo homework/foo.c)
+add_executable(foo homework/shell/foo.c)
+target_link_libraries(foo pthread)
 
 add_executable(test test.c csapp.c)
 target_link_libraries(test pthread)
