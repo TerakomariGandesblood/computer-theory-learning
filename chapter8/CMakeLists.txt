@@ -57,5 +57,7 @@ target_link_libraries(ex_8_25 pthread)
 add_executable(ex_8_26 homework/ex_8_26.c csapp.c)
 target_link_libraries(ex_8_26 pthread)
 
+add_executable(foo homework/foo.c)
+
 add_executable(test test.c csapp.c)
 target_link_libraries(test pthread)
