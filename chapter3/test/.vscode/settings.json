@@ -1,6 +1,0 @@
-{
-  "code-runner.executorMap": {
-    "c": "cd $dir && gcc $fileName -mavx2 -Og -S -Wall -Wextra -std=c17 && code $dir$fileNameWithoutExt.s",
-    "asm": "cd $dir && gcc $dir$fileNameWithoutExt.c -mavx2 -Og -c -Wall -Wextra -std=c17 && objdump -d $dir$fileNameWithoutExt.o"
-  }
-}

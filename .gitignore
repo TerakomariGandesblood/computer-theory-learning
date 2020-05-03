@@ -52,6 +52,10 @@ Mkfile.old
 dkms.conf
 
 # IDE files
+.clangd
 .idea
-cmake-build-debug
-cmake-build-release
+.vscode
+build
+cmake-build-*
+default.profraw
+compile_commands.json
