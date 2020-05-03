@@ -7,7 +7,7 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
       CACHE STRING "Choose the type of build" FORCE)
 endif()
 
-project(CSAPP LANGUAGES C CXX)
+project(Computer-Theory-Learning LANGUAGES C CXX)
 
 if((CMAKE_BUILD_TYPE MATCHES "Debug") OR (CMAKE_BUILD_TYPE MATCHES
     "RelWithDebInfo"))
