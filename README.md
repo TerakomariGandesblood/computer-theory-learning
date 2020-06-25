@@ -1,4 +1,4 @@
-# Computer-Theory-Learning
+# computer-theory-learning
 Computer theory learning notes
 
 # Reference
