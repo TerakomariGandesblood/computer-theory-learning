@@ -25,7 +25,7 @@ jobs:
       - name: CMake
         env:
           CXX: ${{ matrix.compiler }}
-        run: mkdir build && cd build && cmake -DCOVERAGE=TRUE -DCLANG_TIDY=TRUE ..
+        run: mkdir build && cd build && cmake -DCLANG_TIDY=TRUE ..
 
       - name: Build
         run: cmake --build build -j$(nproc) --target all
