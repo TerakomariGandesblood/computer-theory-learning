@@ -29,3 +29,6 @@ jobs:
 
       - name: Build
         run: cmake --build build -j$(nproc) --target all
+
+      - name: Execute tests
+        run: cd build && ctest -j$(nproc) --output-on-failure

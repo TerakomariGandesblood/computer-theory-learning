@@ -16,5 +16,7 @@ include(ClangTidy)
 include(CompilerOptions)
 include(Sanitizers)
 
+enable_testing()
+
 add_subdirectory(CSAPP)
 add_subdirectory(CLRS)
