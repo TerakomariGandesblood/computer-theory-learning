@@ -51,9 +51,9 @@ target_link_libraries(hw_8_24 pthread)
 add_executable(hw_8_25 homework/hw_8_25.c ../lib/csapp.c)
 target_link_libraries(hw_8_25 pthread)
 
-add_executable(shell homework/shell/main.c homework/shell/job.c
-    homework/shell/job.h homework/shell/shell.c
-    homework/shell/shell.h ../lib/csapp.c)
+add_executable(
+  shell homework/shell/main.c homework/shell/job.c homework/shell/job.h
+        homework/shell/shell.c homework/shell/shell.h ../lib/csapp.c)
 target_link_libraries(shell pthread)
 
 add_executable(foo homework/shell/foo.c)

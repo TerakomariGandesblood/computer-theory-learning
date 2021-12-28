@@ -1,22 +1,38 @@
-cmake_minimum_required(VERSION 3.13)
+# ---------------------------------------------------------------------------------------
+# CMake version
+# ---------------------------------------------------------------------------------------
+cmake_minimum_required(VERSION 3.22)
+message(STATUS "CMake version: ${CMAKE_VERSION}")
 
-project(computer-theory-learning LANGUAGES C CXX)
+# ---------------------------------------------------------------------------------------
+# Start klib project
+# ---------------------------------------------------------------------------------------
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-if((CMAKE_BUILD_TYPE STREQUAL "Debug") OR (CMAKE_BUILD_TYPE STREQUAL
-                                           "RelWithDebInfo"))
-  # Address Memory Thread None
-  set(SANITIZER "Address")
-else()
-  set(SANITIZER "None")
+project(
+  computer-theory-learning
+  LANGUAGES C CXX
+  HOMEPAGE_URL https://github.com/KaiserLancelot/computer-theory-learning)
+
+# ---------------------------------------------------------------------------------------
+# Set default build to release
+# ---------------------------------------------------------------------------------------
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE
+      "Release"
+      CACHE STRING "Choose Debug, Release, RelWithDebInfo or MinSizeRel" FORCE)
 endif()
+message(STATUS "Build type: " ${CMAKE_BUILD_TYPE})
 
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+# ---------------------------------------------------------------------------------------
+# Include CMake module
+# ---------------------------------------------------------------------------------------
+include(Options)
 include(Check)
-include(ClangTidy)
+include(Format)
 include(CompilerOptions)
-include(Sanitizers)
 
-enable_testing()
-
+# ---------------------------------------------------------------------------------------
+# Add subdirectory
+# ---------------------------------------------------------------------------------------
 add_subdirectory(CSAPP)
-add_subdirectory(CLRS)

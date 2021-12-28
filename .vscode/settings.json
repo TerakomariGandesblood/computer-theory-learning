@@ -1,0 +1,6 @@
+{
+  "cmake.configureArgs": [
+    "-DCTL_FORMAT=ON",
+    "-DCTL_SANITIZER=ON"
+  ]
+}
