@@ -1,5 +1,9 @@
+set(THREADS_PREFER_PTHREAD_FLAG TRUE)
+find_package(Threads REQUIRED)
+
 add_library(csapp STATIC lib/csapp.c)
 add_library(csapp::csapp ALIAS csapp)
+target_link_libraries(csapp PUBLIC ${CMAKE_THREAD_LIBS_INIT})
 target_include_directories(csapp PUBLIC lib)
 
 add_subdirectory(chapter02)
