@@ -18,8 +18,8 @@ Computer theory learning notes
 
 ### CSAPP
 
-- Answer
-  - https://dreamanddead.github.io/CSAPP-3e-Solutions/
+- https://dreamanddead.github.io/CSAPP-3e-Solutions/
+- http://csapp.cs.cmu.edu/3e/home.html
 
 ---
 
