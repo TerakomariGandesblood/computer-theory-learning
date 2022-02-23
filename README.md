@@ -11,8 +11,7 @@ Computer theory learning notes
 
 ## Environment
 
-- Debian 11
-- GCC 11 or Clang 13
+- [kenv](https://github.com/KaiserLancelot/kenv)
 
 ## Reference
 

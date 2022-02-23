@@ -1,5 +1,8 @@
 include(AddFlag)
 
+# ---------------------------------------------------------------------------------------
+# C/C++ standard
+# ---------------------------------------------------------------------------------------
 # https://cmake.org/cmake/help/latest/prop_tgt/C_STANDARD.html
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_C_EXTENSIONS ON)
@@ -13,40 +16,71 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # ---------------------------------------------------------------------------------------
-# Machine
-# ---------------------------------------------------------------------------------------
-add_compiler_flag("-march=x86-64")
-add_compiler_flag("-mtune=generic")
-
-# ---------------------------------------------------------------------------------------
-# lld
-# ---------------------------------------------------------------------------------------
-if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
-  execute_process(
-    COMMAND ld.lld --version
-    OUTPUT_VARIABLE LLD_VERSION
-    OUTPUT_STRIP_TRAILING_WHITESPACE)
-  message(STATUS "Linker: ${LLD_VERSION}")
-
-  add_linker_flag("-fuse-ld=lld")
-else()
-  execute_process(
-    COMMAND ${CMAKE_LINKER} --version
-    OUTPUT_VARIABLE LINKER_VERSION
-    OUTPUT_STRIP_TRAILING_WHITESPACE)
-  string(REPLACE "\n" ";" LINKER_VERSION ${LINKER_VERSION})
-  list(GET LINKER_VERSION 0 LINKER_VERSION)
-
-  message(STATUS "Linker: ${LINKER_VERSION}")
-endif()
-
-# ---------------------------------------------------------------------------------------
 # Warning
 # ---------------------------------------------------------------------------------------
 add_compiler_flag("-Wall")
 add_compiler_flag("-Wextra")
 add_compiler_flag("-Wpedantic")
-# FIXME add_compiler_flag("-Werror")
+
+if(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
+  add_compiler_flag("-Wno-error=unused-command-line-argument")
+endif()
+
+# ---------------------------------------------------------------------------------------
+# Static link
+# ---------------------------------------------------------------------------------------
+add_linker_flag("-static-libgcc")
+add_linker_flag("-static-libstdc++")
+
+# ---------------------------------------------------------------------------------------
+# Linker
+# ---------------------------------------------------------------------------------------
+if((${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+   OR (${CMAKE_BUILD_TYPE} STREQUAL "RelWithDebInfo")
+   OR (CMAKE_CXX_COMPILER_ID STREQUAL "Clang"))
+  execute_process(
+    COMMAND ld.lld --version
+    OUTPUT_VARIABLE LINKER_VERSION
+    OUTPUT_STRIP_TRAILING_WHITESPACE)
+  message(STATUS "Linker: ${LINKER_VERSION}")
+
+  add_linker_flag("-fuse-ld=lld")
+else()
+  execute_process(
+    COMMAND ld --version
+    OUTPUT_VARIABLE LINKER_VERSION
+    OUTPUT_STRIP_TRAILING_WHITESPACE)
+  string(REPLACE "\n" ";" LINKER_VERSION ${LINKER_VERSION})
+  list(GET LINKER_VERSION 0 LINKER_VERSION)
+  message(STATUS "Linker: ${LINKER_VERSION}")
+endif()
+
+# ---------------------------------------------------------------------------------------
+# General options
+# ---------------------------------------------------------------------------------------
+add_compiler_flag("-pipe")
+
+add_compiler_flag("-march=haswell")
+add_compiler_flag("-mtune=haswell")
+
+add_compiler_flag("-fno-plt")
+
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+# ---------------------------------------------------------------------------------------
+# Optimization
+# ---------------------------------------------------------------------------------------
+if((${CMAKE_BUILD_TYPE} STREQUAL "Release") OR (${CMAKE_BUILD_TYPE} STREQUAL
+                                                "MinSizeRel"))
+  add_compiler_flag("-fno-math-errno")
+  add_compiler_flag("-fno-trapping-math")
+  add_compiler_flag("-fno-semantic-interposition")
+
+  if(CMAKE_COMPILER_IS_GNUCXX)
+    add_compiler_flag("-fipa-pta")
+    add_compiler_flag("-fgraphite-identity")
+  endif()
+endif()
 
 # ---------------------------------------------------------------------------------------
 # Link time optimization
@@ -68,6 +102,15 @@ if((${CMAKE_BUILD_TYPE} STREQUAL "Release") OR (${CMAKE_BUILD_TYPE} STREQUAL
   endif()
 else()
   message(STATUS "Link time optimization: disable")
+endif()
+
+# ---------------------------------------------------------------------------------------
+# Strip
+# ---------------------------------------------------------------------------------------
+if((${CMAKE_BUILD_TYPE} STREQUAL "Release") OR (${CMAKE_BUILD_TYPE} STREQUAL
+                                                "MinSizeRel"))
+  message(STATUS "Discard symbols and other data from object files")
+  add_linker_flag("-s")
 endif()
 
 # ---------------------------------------------------------------------------------------

@@ -73,3 +73,11 @@ elseif(${CMAKE_CXX_COMPILER_ID} STREQUAL "Clang")
 else()
   message(FATAL_ERROR "The compiler does not support: ${CMAKE_CXX_COMPILER_ID}")
 endif()
+
+if(NOT (${CMAKE_C_COMPILER_ID} STREQUAL ${CMAKE_CXX_COMPILER_ID}))
+  message(FATAL_ERROR "C and C++ compilers are different")
+endif()
+
+if(NOT (${CMAKE_C_COMPILER_VERSION} STREQUAL ${CMAKE_CXX_COMPILER_VERSION}))
+  message(FATAL_ERROR "C and C++ compiler versions are different")
+endif()
